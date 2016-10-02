@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Instant Ratings for Google Movies™",
+  "version": "0.1",
+  "icons": {
+    "128": "icon_128.png"
+  },
+  "description": "No more hunting down movie ratings.",
+  "permissions": [
+    "<all_urls>","webRequest"
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [{
+    "matches": [
+      "*://google.com/movies*"
+    ],
+    "js": ["jquery-3.1.1.min.js", "content.js"]
+  }]
+}
